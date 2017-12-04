@@ -13,4 +13,3 @@
 - open an command line interface
 - navigate to the new directory
 > `kenaflow --setusername <user> --setpassword <password>`
-
