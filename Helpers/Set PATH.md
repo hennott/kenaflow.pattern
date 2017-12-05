@@ -3,4 +3,4 @@
 !! ATTENTION !!
 This change affects permanently to the PATH .. but not to the current session!
 
-> `setx PATH=%PATH%;D:\kenaflow\engine\kenaflow.exe`
+> `setx /M PATH "%PATH%;D:\kenaflow\engine\kenaflow.exe"`
