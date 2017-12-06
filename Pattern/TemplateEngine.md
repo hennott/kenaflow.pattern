@@ -1,14 +1,23 @@
 # The powerful template engine
 
-# How to use
-> `Invoke-KFTemplate `
+## How to use
+> `Invoke-KFTemplate -Template <string>  [-LocalConfig <object>] [-Item <sharepoint-list-item-object>]`
 
-# Wildcards
+example with the template defined in the WFconfig-List with the key "tpl.Mail":
+> `Invoke-KFTemplate -Template $config['tpl.Mail']`
+
+example with an local config:
+> `$cfg = @(@{"Responder":"Me"})`
+> `Invoke-KFTemplate -Template $config['tpl.Mail'] -Config $cfg`
+
+# All about the template
+
+## Wildcards
 > `{{item-internal-fieldname}}`
 > `[[config-key]]`
 > `((local-key))`
 
-# Special features
+## Special features
 - "user"-field 
 > `{{item-internal-fieldname|<formater>}}`
 	- nothing > display name
