@@ -2,10 +2,11 @@
 
 ## Reset permissions
 - This is the most used command because it set the permissions like defined no more parameter is needed
-> `D`
+> 
 
 - example
-> `Reset-KFPermission -Users @(
+```
+Reset-KFPermission -Users @(
 	@{ 
 		User = "<mail>"; 
 		Quick = "CRUDMA"
@@ -26,33 +27,46 @@
 		User = "<name of SP user group>"; 
 		Quick = "CRUDMA"
 	}
-	);`
+	);
+```
 
 ## Add Permissions
-> `Add-KFPermission [-Users] <list-of-users> [-Item <list-item>] [-CopyCurrentPermissions[:$false]] [-BreakPermissionInheritance[:$true]] [-ClearPermissions[:$false]]`
+```
+Add-KFPermission [-Users] <list-of-users> [-Item <list-item>] [-CopyCurrentPermissions[:$false]] [-BreakPermissionInheritance[:$true]] [-ClearPermissions[:$false]]
+```
 
 - example
-> `Add-KFPermission -Users @( 
+```
+Add-KFPermission -Users @( 
 	@{ 
 		User = "<user>"; 
 		PermissionsSet = "<name> | array of "name"
-	});`
-> `Add-KFPermission -Users @( 
+	});
+```
+```
+Add-KFPermission -Users @( 
 	@{ 
 		User = "<user>"; 
 		Quick = "CRUDMA"
-	});`
+	});
+```
 
 ## Remove Permissions
-> `Remove-KFPermission [-Users] <list-of-users> [-Item <list-item>] [-CopyCurrentPermissions[:$false]] [-BreakPermissionInheritance[:$true]] [-ClearPermissions[:$false]]`
+```
+Remove-KFPermission [-Users] <list-of-users> [-Item <list-item>] [-CopyCurrentPermissions[:$false]] [-BreakPermissionInheritance[:$true]] [-ClearPermissions[:$false]]
+```
 
 ## Update Permissions
-> `Update-KFPermission -RemoveUsers <list-of-users> -AddUsers <list-of-users> [-Item <list-item>] [-CopyCurrentPermissions[:$false]] [-BreakPermissionInheritance[:$true]] [-ClearPermissions[:$false]`
-
-
+```
+Update-KFPermission -RemoveUsers <list-of-users> -AddUsers <list-of-users> [-Item <list-item>] [-CopyCurrentPermissions[:$false]] [-BreakPermissionInheritance[:$true]] [-ClearPermissions[:$false]
+```
 
 ## Permissions inheritance
-> `Stop-KFPermissionInheritence [-Item <list-item>] [-CopyCurrentPermissions[:$false]]`
+```
+Stop-KFPermissionInheritence [-Item <list-item>] [-CopyCurrentPermissions[:$false]]
+```
 
-> `Reset-KFPermissionInheritence [-Item <list-item>]`
+```
+Reset-KFPermissionInheritence [-Item <list-item>]
+```
 
