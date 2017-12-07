@@ -1,12 +1,14 @@
 # Set permissions
 
-## Reset permissions
+## Set permissions
 - This is the most used command because it set the permissions like defined no more parameter is needed
-> 
+```
+Set-KFPermission -Users <list-of-users> [-Item <list-item>]
+```
 
 - example
 ```
-Reset-KFPermission -Users @(
+Set-KFPermission -Users @(
 	@{ 
 		User = "<mail>"; 
 		Quick = "CRUDMA"
