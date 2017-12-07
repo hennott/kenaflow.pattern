@@ -27,7 +27,7 @@ Reset-KFPermission -Users @(
 		User = "<name of SP user group>"; 
 		Quick = "CRUDMA"
 	}
-	);
+);
 ```
 
 ## Add Permissions
@@ -41,14 +41,16 @@ Add-KFPermission -Users @(
 	@{ 
 		User = "<user>"; 
 		PermissionsSet = "<name> | array of "name"
-	});
+	}
+);
 ```
 ```
 Add-KFPermission -Users @( 
 	@{ 
 		User = "<user>"; 
 		Quick = "CRUDMA"
-	});
+	}
+);
 ```
 
 ## Remove Permissions
