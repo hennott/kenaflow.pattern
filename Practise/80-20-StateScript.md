@@ -33,7 +33,7 @@ Set-KFPermission -Permissions @(
 # Write a mail based on a template stored in the WFconfig list
 $Body = (Invoke-KFTemplate -Template $config["tpl.Mail"])
 # I reccomend you to use a <WorkflowKey which is the first part of the subject. It´s easier to handle the mail
-Send-KFMail -Body $Body -Subject "<WorkflowKey>: <Subject>" -Addresses "{{Person}};[[Involved]]" -IsHTMLMail
+Send-KFMail -Body $Body -Subject "<WorkflowKey>: <Subject>" -Addresses "{{Person}};[[user.Involved]]" -IsHTMLMail
 
 # Use the TemplateEngine in place and attach a portocol information to special field 
 $Protocol = (Invoke-KFTemplate -template "The {{Person}} get involved.")
