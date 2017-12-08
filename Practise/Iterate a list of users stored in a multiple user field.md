@@ -2,7 +2,8 @@
 
 Sometimes it is necessary to process a list of users in order, for example, to send a mail and wait for input. This is exactly what this example does.
 
-´´´
+```
+# Collect the two user fields
 $NextUsers = $item["PesonsToInform"]
 $ReadyUsers = $item["InformedPersons"]
 $NextUsers = ([Microsoft.SharePoint.Client.FieldUserValue[]]$NextUsers)
@@ -47,4 +48,4 @@ if( $NextUsers.Count -gt 0) {
     # Next step in the process
     Set-KFState "1.1"
 }
-´´´
+```
