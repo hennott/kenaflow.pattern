@@ -8,7 +8,7 @@ Set-KFPermission -Users <list-of-users> [-Item <list-item>]
 
 - example
 ```
-Set-KFPermission -Users @(
+Set-KFPermission -Permissions @(
 	@{ 
 		User = "<mail>"; 
 		Quick = "CRUDMA"
